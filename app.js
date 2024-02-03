@@ -111,3 +111,52 @@ console.log(imoji.length);
 // trim()	            Removes whitespace from both ends of a string.
 // valueOf()	        Returns the primitive value of a String object.
 
+/*------------------------------------------ */
+
+//! String Birleştirme
+
+const name="John"
+const surname="Due"
+const job="Developer"
+
+// + 
+console.log("Our customer's name: "+name+" surname:"+surname+" and his job:"+job)
+console.log(`our customers's name:${name} surname:${surname} and his job: ${job}`)
+const fullname=name.concat(surname)
+console.log(fullname)
+
+// toLowerCase()
+console.log(fullname.toLowerCase())
+
+const giris="clarusway"
+const girisKodu=prompt("Giriş kodunu girin:")
+if (giris===girisKodu.toLowerCase()){
+    console.log("Girişiniz onaylandı")
+}
+else{
+    console.log("giriş hatalı")
+}
+// toUpperCase() büyük harfe çevirir.
+
+const statement = "Güzel bir gün, kahve ve hurma ile iyi gidiyor."
+console.log(statement.toLocaleUpperCase());
+console.log(statement);
+
+
+// !  STRİNG PARÇALAMA**********
+
+// split parçaladığı bölümleri diziye çevirir.
+// str1.split(seperator)=> seperator bir ayraç ,
+
+let text = "Clarusway It bootcamp"
+console.log(text.split("")); //harf harf ayırır.
+// console.log(text);
+const splittedtext=text.split(" ")  //araya boşluk verirsek kelmie kelime ayrır.
+console.log(splittedtext);
+
+for (let i =0;i<splittedtext.length-1;i++){
+    console.log(splittedtext[i]);
+}
+
+let months="Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec"
+console.log(months.toLocaleUpperCase().split("/"));
