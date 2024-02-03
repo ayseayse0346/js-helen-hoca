@@ -146,7 +146,7 @@ console.log(statement);
 // !  STRİNG PARÇALAMA**********
 
 // split parçaladığı bölümleri diziye çevirir.
-// str1.split(seperator)=> seperator bir ayraç ,
+// str1.split(seperator)=> seperator bir ayraç ,"" , " " , ", ", "/"
 
 let text = "Clarusway It bootcamp"
 console.log(text.split("")); //harf harf ayırır.
@@ -157,6 +157,32 @@ console.log(splittedtext);
 for (let i =0;i<splittedtext.length-1;i++){
     console.log(splittedtext[i]);
 }
+for (let i=splittedText.length-1;i>=0;i--){
+    console.log(splittedText[i])
+}
 
 let months="Jan / Feb / Mar / Apr / May / Jun / Jul / Aug / Sep / Oct / Nov / Dec"
 console.log(months.toLocaleUpperCase().split("/"));
+let  liste="Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand"
+let yeniListe=liste.split(";")
+console.log(yeniListe[2])
+//! DİKKAT JOİN ve REVERSE string metodu değildir ama splitle çok kullanılır
+// join birleştirme , reverse tersine çevirme 
+// bu cümleyi terstten string olarak ayzın
+let cumle = "Merhaba Değerli Chort16 sakinleri"
+let yenicumle = cumle.split(" ")
+console.log(yenicumle);
+console.log(yeniCumle[2])
+
+// reverse terstten yazdırma -aray methodu
+console.log(yenicumle.reverse());
+
+// join-aray methodu 
+console.log(yenicumle.reverse().join("-"));
+
+// polindrom kelime : Girilen kelime polindrom mudur
+let kelime=prompt("Kelime Girin:")    
+let tersten=kelime.split("").reverse().join("")
+console.log(tersten)
+
+kelime===tersten ? console.log("polindrom") : console.log("polindrom değil")
