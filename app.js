@@ -218,3 +218,31 @@ console.log(yeni);
 let yenideğer=yeni.replaceAll("ı","i")
 console.log(yenideğer);
 
+
+/*  //!String içinde arama işlemleri */
+// includes, indexOf, search ,match() metodlarını kullanabiliriz
+//! includes()   ... yı içeriyor mu -> true yada false bir değer döndürür.caseSensitive (küçük büyük harfe duyarlı) bir özelliktir.
+
+console.log(`özlü sözde tarak kelimesi geçiyor mu :${ozlusoz.includes("tarak")}`);  //ozlu sözde tarak kelimesi geçiyor mu ona bakarız
+
+let url = "https://clarusway.com"
+let msg = url.includes("https")? "bu site güvenilir.": "bu site güvenli değil"  //turnary ile yaptık
+console.log(msg);
+
+let email = "helenclarusway.com"
+msg=email.includes("@")? "mail adresi geçerli ": "mail adresi geçersiz"
+console.log(msg);
+
+//!indexOf (aranacak metin)
+//? Bir karakter yada karakter grubumun kaçıncı sırada olduğunu yani index numarasını verir. 
+
+console.log(email.indexOf("com"))
+
+//?Eğer o karakter yoksa olmadığını -1 değeri vererek gösterir. Büyük küçük harfe duyarlıdır. Sadece ilk gördüğünün index numarasını verir
+
+console.log(email.indexOf("edu"))
+
+msg=email.indexOf("edu")=== -1 ? "Bu bir eğitim sitesi değildir" : " Bu bir eğitim sitesidir"
+// console.log(msg)
+// console.log(email.indexOf("co"));  //15 numarayla karşılaşır. ve 15 verir istersen com yaz 
+
