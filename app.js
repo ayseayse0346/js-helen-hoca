@@ -243,6 +243,44 @@ console.log(email.indexOf("com"))
 console.log(email.indexOf("edu"))
 
 msg=email.indexOf("edu")=== -1 ? "Bu bir eğitim sitesi değildir" : " Bu bir eğitim sitesidir"
-// console.log(msg)
+console.log(msg)
 // console.log(email.indexOf("co"));  //15 numarayla karşılaşır. ve 15 verir istersen com yaz 
+
+
+//! search()
+
+// bir string içindeki aranan elemanda ilk bulduğunun index numarasını yazar. Bulamazsa -1 dönderir.
+
+let metin1="Clarusway it bootcamp IT .Clarusway develop you IT field"
+
+console.log(metin1.search("IT"))
+console.log(metin1.search("it"))
+
+// Regex - regular Expression 
+//   / ile ifade edilir
+//  /g => global , bütün cümle içinde uygula
+// /i => case sensitive özlliğini kaldır.Küçük büyük olmasına bakmadan bul
+console.log(metin1.search(/[aeiıoöuü]/ig))
+console.log(metin1.replace(/IT/gi,"Communication"))
+
+//! Match 
+// string içinde aranan metin bulunur ve bir dizi dönderir.
+// Regex ifadeler de kullanılabilir
+
+let metin2="Bugün gerçekten çok güzel , hafif serin  bugün"
+console.log(metin2.match(/bugün/gi))
+
+let değistirilmisMetin=metin2.match(/[e]/gi)
+console.log(değistirilmisMetin.length)
+
+
+
+// trim ,startsWith , endsWith
+let sentence1="     Clarusway  "
+console.log(sentence1.trim())
+
+metin="Clarusway"
+console.log(metin.startsWith("c"))
+console.log(metin.endsWith("y"))
+
 
