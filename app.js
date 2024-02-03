@@ -186,3 +186,35 @@ let tersten=kelime.split("").reverse().join("")
 console.log(tersten)
 
 kelime===tersten ? console.log("polindrom") : console.log("polindrom değil")
+
+// ! slice 
+// ?  String içinde bir bölümü almak için kullanılır. (immmutable, kalıcı değişiklik olmaz)
+// Slice(başlangıç index numarası, bitiş index numarası(bu numara dahil değildir))
+
+let atasoz= "oku da adam ol"
+console.log(atasoz.slice(2,8));
+console.log(atasoz.slice(7));  //sonunu vermediğimiz zaman sonuna kadar alır.
+
+// tersten de erişim sağlanır negatif değer kullanarak
+
+console.log(atasoz.slice(-6,-2));
+
+// ! substring(başlangıç index no ,bitiş index no )
+// sliceden tek farkı negatif kullanılmaz.
+
+console.log(atasoz.substring(3,8));
+
+// ! stringde değişiklik yapma*****
+// ?replace aranan değiştirilir.replaceAll aranan hepsi değiştirilecek
+let ozlusoz= "tecrübe tarak gibidir; ama hayat insana kel olduğu zaman verir."
+console.log(ozlusoz.replace("kel","saçlı"));
+//kelime değişri ancak tamamen değiştirmez.
+
+let variable = "kullanıcı adı"
+let yeni = variable.replace(" ","_")
+console.log(yeni);
+
+// let yenideğer=yeni.replace("ı","i")
+let yenideğer=yeni.replaceAll("ı","i")
+console.log(yenideğer);
+
